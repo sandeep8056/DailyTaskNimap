@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd ">
+ 
+  <context:annotation-config />
+<!--  
+
+<bean class="com.springcore.lifecycle.Car" name="car1" init-method="init" destroy-method="destroy">
+<property name="model" value="Tata XUV" />
+<property name="colour" value="Red"/>
+<property name="price" value="7.5 LPA" />
+</bean>
+
+
+<bean class="com.springcore.lifecycle.Pepsi" name="p1">
+<property name="price" value="40"/>
+<property name="qty" value="600" />
+</bean>
+-->
+
+<bean class="com.springcore.lifecycle.AnnotationExample" name="subject">
+
+<property name="subject" value="Maths" />
+
+</bean>
+
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+
+
+
+
+
+</beans> 

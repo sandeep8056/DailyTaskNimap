@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd ">
+ 
+ <!-- dependency injected using constructor 
+ 
+ <bean class="com.springcore.ci.Certi" name="certi1">
+ <constructor-arg value="Java J2EE" />
+  </bean>
+
+
+<bean class="com.springcore.ci.Person" name="person" >
+<constructor-arg value="Sandeep" />
+<constructor-arg ref="certi1" />
+ </bean>
+-->
+
+
+
+<!-- dependency injection using c schema -->
+
+<bean class="com.springcore.ci.Certi"  c:cetificate="python" name="cer" />
+<bean class="com.springcore.ci.Person" c:name="Sandeep" c:cer-ref="cer" name="person">
+
+<constructor-arg >
+<list>
+
+<value>Friend</value>
+<value>Enemy</value>
+<value>neutral</value>
+</list>	
+</constructor-arg>
+
+</bean>
+
+
+<bean class="com.springcore.ci.Addition" name="add"  >
+<constructor-arg value="12" type="int" index="1"/>
+<constructor-arg value="15" type="int" index="0"/>
+</bean>
+
+</beans> 
