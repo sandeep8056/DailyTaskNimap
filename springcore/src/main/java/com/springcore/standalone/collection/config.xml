@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:util="http://www.springframework.org/schema/util"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/util
+ https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+<util:list  list-class="java.util.LinkedList" id="friend">
+
+<value>Sandeep</value>
+<value>Gaurav</value>
+<value>Rohit</value>
+<value>Mahesh</value>
+</util:list>
+
+<util:map map-class="java.util.HashMap" id="feestructure">
+<entry key="Java" value="10000"/>
+<entry key="Dot Net" value="5000"/>
+<entry key ="node js" value="6000"/>
+
+
+</util:map>
+
+<bean class="com.springcore.standalone.collection.Person" id="person">
+	<property name="friends" ref="friend"/>
+	<property name="coursefee" ref="feestructure"/>
+</bean>
+</beans> 
